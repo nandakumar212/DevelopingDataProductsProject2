@@ -1,0 +1,30 @@
+---
+title: "Developing Data Products Project 2"
+author: "Nanda kumar Sathiyamoorthy"
+date: "August 6, 2017"
+output: 
+  ioslides_presentation: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Analysis of mtcars dataset
+
+Here we perform a simple plot using plotly on the mtcars data set to see how mpg(y-axis) changes with weight(x-axis), horsepower (z-axis) and gear (color).
+   
+    
+   
+#### *Note : Please use Google Chrome if the plot in the next slide is not visible.*
+
+*** 
+```{r cars, echo = FALSE, message = FALSE, warning = FALSE}
+library(plotly)
+library(RColorBrewer)
+plot_ly(mtcars, x = ~ wt, y = ~ mpg, z = ~ hp, type = "scatter3d", 
+        color = ~ factor(gear), colors = brewer.pal(3, "Set2"))
+```
+
+## Thank You
